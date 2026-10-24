@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>차트 매매를 위한 리스크 관리: 손절, 손익비, 포지션 크기 | Chart Strategy Agent</title>
+  <meta name="description" content="아무리 좋은 패턴도 리스크 관리 없이는 의미가 없습니다. 손절 위치 정하는 법, 손익비 계산, 계좌 대비 1~2% 규칙으로 포지션 크기를 정하는 방법을 설명합니다." />
+  <link rel="canonical" href="https://wooramseo1.github.io/chart_image_classification/learn-risk.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Chart Strategy Agent" />
+  <meta property="og:title" content="차트 매매를 위한 리스크 관리: 손절, 손익비, 포지션 크기 | Chart Strategy Agent" />
+  <meta property="og:description" content="아무리 좋은 패턴도 리스크 관리 없이는 의미가 없습니다. 손절 위치 정하는 법, 손익비 계산, 계좌 대비 1~2% 규칙으로 포지션 크기를 정하는 방법을 설명합니다." />
+  <meta property="og:url" content="https://wooramseo1.github.io/chart_image_classification/learn-risk.html" />
+  <meta property="og:locale" content="ko_KR" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <meta name="google-adsense-account" content="ca-pub-8016145801255618" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8016145801255618" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;700;900&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "차트 매매를 위한 리스크 관리: 손절, 손익비, 포지션 크기", "description": "아무리 좋은 패턴도 리스크 관리 없이는 의미가 없습니다. 손절 위치 정하는 법, 손익비 계산, 계좌 대비 1~2% 규칙으로 포지션 크기를 정하는 방법을 설명합니다.", "inLanguage": "ko", "datePublished": "2026-10-24", "dateModified": "2026-10-24", "author": {"@type": "Organization", "name": "Chart Strategy Agent"}, "mainEntityOfPage": "https://wooramseo1.github.io/chart_image_classification/learn-risk.html"}</script>
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a href="index.html" class="brand">
+        <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
+          <rect width="32" height="32" rx="8" fill="url(#bg)" />
+          <path d="M6 22 L12 15 L17 19 L26 9" stroke="#fff" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+          <circle cx="26" cy="9" r="2.4" fill="#fff" />
+          <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3b82f6" /><stop offset="1" stop-color="#10b981" /></linearGradient></defs>
+        </svg>
+        <span>Chart Strategy <b>Agent</b></span>
+      </a>
+      <nav class="menu" id="menu">
+        <a href="index.html#analyze">차트 분석</a>
+        <a href="index.html#strategy">전략 가이드</a>
+        <a href="learn.html" class="active" aria-current="page">학습 센터</a>
+        <a href="index.html#faq">FAQ</a>
+        <a href="about.html">서비스 소개</a>
+      </nav>
+      <div class="nav-right">
+        <a href="index.html#analyze" class="btn btn-primary btn-sm">분석 시작</a>
+        <button class="menu-toggle" id="menuToggle" aria-label="메뉴 열기">☰</button>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="현재 위치"><a href="index.html">홈</a><span><a href="learn.html">학습 센터</a></span><span>리스크 관리</span></nav>
+        <h1>차트 매매를 위한 리스크 관리: 손절, 손익비, 포지션 크기</h1>
+        <p class="lead">아무리 좋은 패턴도 리스크 관리 없이는 의미가 없습니다. 손절 위치 정하는 법, 손익비 계산, 계좌 대비 1~2% 규칙으로 포지션 크기를 정하는 방법을 설명합니다.</p>
+        <div class="meta-line"><span>작성: Chart Strategy Agent 편집팀</span><span>최종 수정: 2026-10-24</span><span>읽는 시간 약 8분</span></div>
+      </div>
+    </section>
+    <div class="container article-wrap">
+      <article class="prose">
+
+<p>차트 패턴 분석은 ‘어디서 들어갈지’를 알려 주지만, 계좌를 지켜 주는 것은 ‘얼마나 들어가고 어디서 나올지’를 정하는 리스크 관리입니다. Chart Strategy Agent의 전략 리포트에 진입·손절·목표가 항상 함께 표시되는 것도 이 때문입니다.</p>
+
+<h2 id="s1">왜 리스크 관리가 먼저인가</h2>
+<p>손실과 회복은 대칭이 아닙니다. 계좌가 10% 줄면 회복에 약 11%가 필요하지만, 50% 줄면 100%의 수익이 있어야 원금으로 돌아옵니다.</p>
+<div class="table-scroll"><table>
+  <thead><tr><th>손실률</th><th>원금 회복에 필요한 수익률</th></tr></thead>
+  <tbody>
+    <tr><td>-10%</td><td>+11.1%</td></tr>
+    <tr><td>-20%</td><td>+25.0%</td></tr>
+    <tr><td>-30%</td><td>+42.9%</td></tr>
+    <tr><td>-50%</td><td>+100.0%</td></tr>
+  </tbody>
+</table></div>
+<p>따라서 큰 손실 한 번을 피하는 것이 작은 수익 여러 번보다 중요합니다.</p>
+
+<h2 id="s2">손절 위치는 ‘패턴이 틀렸다고 판명되는 곳’</h2>
+<p>손절은 감정이나 임의의 퍼센트가 아니라 <strong>진입 근거가 무효가 되는 가격</strong>에 둡니다.</p>
+<ul>
+  <li><strong>추세선 매매:</strong> 종가가 추세선 아래로 명확히 마감한 지점</li>
+  <li><strong>삼각수렴 돌파 매매:</strong> 가격이 다시 삼각형 내부로 들어온 지점</li>
+  <li><strong>관망 신호:</strong> 신규 진입을 하지 않는 것 자체가 리스크 관리입니다</li>
+</ul>
+
+<h2 id="s3">손익비(Risk-Reward Ratio) 계산</h2>
+<p>손익비는 <strong>(목표가 − 진입가) ÷ (진입가 − 손절가)</strong>입니다. 예를 들어 10,000원에 진입해 손절이 9,600원, 목표가 11,000원이면 손실 위험은 400원, 기대 수익은 1,000원이므로 손익비는 1 : 2.5입니다.</p>
+<div class="table-scroll"><table>
+  <thead><tr><th>손익비</th><th>손익분기 승률</th></tr></thead>
+  <tbody>
+    <tr><td>1 : 1</td><td>50%</td></tr>
+    <tr><td>1 : 2</td><td>33.3%</td></tr>
+    <tr><td>1 : 2.5</td><td>28.6%</td></tr>
+    <tr><td>1 : 3</td><td>25%</td></tr>
+  </tbody>
+</table></div>
+<p>손익비가 1 : 2 이상이면 승률이 절반에 못 미쳐도 장기적으로 손실을 피할 수 있습니다. Chart Strategy Agent는 투자 성향에 따라 보수적 1 : 2, 중립 1 : 2.5, 공격적 1 : 3의 손익비를 기준으로 목표를 제시합니다.</p>
+
+<h2 id="s4">포지션 크기: 1~2% 규칙</h2>
+<p>한 번의 매매에서 잃을 수 있는 최대 금액을 <strong>계좌의 1~2%</strong>로 제한하는 방법입니다.</p>
+<div class="callout"><b>계산 예시</b>계좌 1,000만 원, 허용 손실 1%(10만 원), 진입가 10,000원, 손절가 9,600원이면<br />주당 위험 = 400원 → 매수 수량 = 100,000 ÷ 400 = <strong>250주</strong>(투입 금액 250만 원)</div>
+<p>이 방식의 장점은 손절 폭이 넓은 매매일수록 자동으로 수량이 줄어든다는 것입니다. 연속으로 열 번 손절해도 계좌의 10~20%만 줄어들어 다시 기회를 잡을 수 있습니다.</p>
+
+<h2 id="s5">분할 진입과 분할 청산</h2>
+<ul>
+  <li><strong>분할 진입:</strong> 첫 진입 후 패턴이 맞게 진행될 때 추가합니다. 틀렸을 때의 손실이 작아집니다.</li>
+  <li><strong>분할 청산:</strong> 1차 목표에서 절반을 정리하고, 나머지는 손절선을 진입가로 올려 ‘손실 없는 포지션’으로 만듭니다.</li>
+</ul>
+
+<h2 id="s6">투자 성향별 권장 설정</h2>
+<div class="table-scroll"><table>
+  <thead><tr><th>성향</th><th>1회 위험</th><th>진입 방식</th><th>손익비 기준</th></tr></thead>
+  <tbody>
+    <tr><td>보수적</td><td>계좌의 0.5~1%</td><td>3회 분할</td><td>1 : 2 이상</td></tr>
+    <tr><td>중립</td><td>계좌의 1~1.5%</td><td>2회 분할</td><td>1 : 2.5 이상</td></tr>
+    <tr><td>공격적</td><td>계좌의 1.5~2%</td><td>1~2회</td><td>1 : 3 이상</td></tr>
+  </tbody>
+</table></div>
+<div class="callout key"><b>핵심 요약</b><ul><li>손절은 진입 근거가 무효가 되는 가격에 둡니다.</li><li>손익비 1 : 2 이상인 기회만 선택합니다.</li><li>한 번의 매매 손실은 계좌의 1~2% 이내로 제한합니다.</li></ul></div>
+
+        <div class="cta-box">
+          <p>직접 차트를 올려 AI 분석을 받아 보세요.</p>
+          <a href="index.html#analyze" class="btn btn-primary">차트 분석하기 →</a>
+        </div>
+        <p class="disclaimer">※ 이 글은 일반적인 기술적 분석 개념을 설명하는 교육 자료이며, 특정 종목의 매수·매도를 권유하지 않습니다.</p>
+        <section class="related">
+          <h2>함께 읽으면 좋은 글</h2>
+          <div class="learn-grid">
+        <a class="learn-card" href="learn-trendline.html">
+          <span class="pill blue">기초 이론</span>
+          <h3>추세선(Trend Line) 완벽 가이드: 긋는 법부터 매매 전략까지</h3>
+          <p>상승·하락 추세선을 올바르게 긋는 기준, 유효성을 판단하는 방법, 돌파와 이탈 시 대응 전략을 예시 차트와 함께 정리했습니다.</p>
+          <small>읽는 시간 약 9분</small>
+        </a>
+        <a class="learn-card" href="learn-triangle.html">
+          <span class="pill green">기초 이론</span>
+          <h3>삼각수렴(Triangle Pattern) 패턴의 종류와 돌파 매매 전략</h3>
+          <p>대칭·상승·하강 삼각형의 차이, 돌파 신뢰도를 높이는 조건, 목표가 계산법과 가짜 돌파 대응까지 실전 관점에서 설명합니다.</p>
+          <small>읽는 시간 약 10분</small>
+        </a>
+          </div>
+        </section>
+      </article>
+      <aside class="toc" aria-label="목차">
+        <b>목차</b>
+        <ol>
+          <li><a href="#s1">왜 리스크 관리가 먼저인가</a></li>
+          <li><a href="#s2">손절 위치는 ‘패턴이 틀렸다고 판명되는 곳’</a></li>
+          <li><a href="#s3">손익비(Risk-Reward Ratio) 계산</a></li>
+          <li><a href="#s4">포지션 크기: 1~2% 규칙</a></li>
+          <li><a href="#s5">분할 진입과 분할 청산</a></li>
+          <li><a href="#s6">투자 성향별 권장 설정</a></li>
+        </ol>
+      </aside>
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>
+        <a href="index.html" class="brand"><span>Chart Strategy <b>Agent</b></span></a>
+        <p>AI 기반 투자 분석을 위한 차트 이미지 자동 분석 사이트</p>
+        <nav class="footer-links" aria-label="사이트 정보">
+          <a href="about.html">서비스 소개</a>
+          <a href="learn.html">학습 센터</a>
+          <a href="privacy.html">개인정보처리방침</a>
+          <a href="terms.html">이용약관</a>
+          <a href="contact.html">문의하기</a>
+        </nav>
+      </div>
+      <p class="fine">본 서비스는 교육·연구 목적의 보조 도구이며, 제공되는 정보는 투자 자문이 아닙니다.<br />문의: leapforfly@gmail.com<br />© 2026 Chart Strategy Agent</p>
+    </div>
+  </footer>
+  <script>
+    document.getElementById("menuToggle").addEventListener("click", function () {
+      document.getElementById("menu").classList.toggle("open");
+    });
+  </script>
+</body>
+</html>

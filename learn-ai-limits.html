@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI 차트 분석의 원리와 한계: 결과를 올바르게 해석하는 법 | Chart Strategy Agent</title>
+  <meta name="description" content="이미지 분류 모델이 차트를 어떻게 판별하는지, 신뢰도 숫자가 의미하는 것과 의미하지 않는 것, AI 분석을 투자 판단에 활용하는 올바른 방법을 설명합니다." />
+  <link rel="canonical" href="https://wooramseo1.github.io/chart_image_classification/learn-ai-limits.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Chart Strategy Agent" />
+  <meta property="og:title" content="AI 차트 분석의 원리와 한계: 결과를 올바르게 해석하는 법 | Chart Strategy Agent" />
+  <meta property="og:description" content="이미지 분류 모델이 차트를 어떻게 판별하는지, 신뢰도 숫자가 의미하는 것과 의미하지 않는 것, AI 분석을 투자 판단에 활용하는 올바른 방법을 설명합니다." />
+  <meta property="og:url" content="https://wooramseo1.github.io/chart_image_classification/learn-ai-limits.html" />
+  <meta property="og:locale" content="ko_KR" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <meta name="google-adsense-account" content="ca-pub-8016145801255618" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8016145801255618" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;700;900&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "AI 차트 분석의 원리와 한계: 결과를 올바르게 해석하는 법", "description": "이미지 분류 모델이 차트를 어떻게 판별하는지, 신뢰도 숫자가 의미하는 것과 의미하지 않는 것, AI 분석을 투자 판단에 활용하는 올바른 방법을 설명합니다.", "inLanguage": "ko", "datePublished": "2026-10-24", "dateModified": "2026-10-24", "author": {"@type": "Organization", "name": "Chart Strategy Agent"}, "mainEntityOfPage": "https://wooramseo1.github.io/chart_image_classification/learn-ai-limits.html"}</script>
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a href="index.html" class="brand">
+        <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
+          <rect width="32" height="32" rx="8" fill="url(#bg)" />
+          <path d="M6 22 L12 15 L17 19 L26 9" stroke="#fff" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+          <circle cx="26" cy="9" r="2.4" fill="#fff" />
+          <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3b82f6" /><stop offset="1" stop-color="#10b981" /></linearGradient></defs>
+        </svg>
+        <span>Chart Strategy <b>Agent</b></span>
+      </a>
+      <nav class="menu" id="menu">
+        <a href="index.html#analyze">차트 분석</a>
+        <a href="index.html#strategy">전략 가이드</a>
+        <a href="learn.html" class="active" aria-current="page">학습 센터</a>
+        <a href="index.html#faq">FAQ</a>
+        <a href="about.html">서비스 소개</a>
+      </nav>
+      <div class="nav-right">
+        <a href="index.html#analyze" class="btn btn-primary btn-sm">분석 시작</a>
+        <button class="menu-toggle" id="menuToggle" aria-label="메뉴 열기">☰</button>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="현재 위치"><a href="index.html">홈</a><span><a href="learn.html">학습 센터</a></span><span>AI 이해</span></nav>
+        <h1>AI 차트 분석의 원리와 한계: 결과를 올바르게 해석하는 법</h1>
+        <p class="lead">이미지 분류 모델이 차트를 어떻게 판별하는지, 신뢰도 숫자가 의미하는 것과 의미하지 않는 것, AI 분석을 투자 판단에 활용하는 올바른 방법을 설명합니다.</p>
+        <div class="meta-line"><span>작성: Chart Strategy Agent 편집팀</span><span>최종 수정: 2026-10-24</span><span>읽는 시간 약 8분</span></div>
+      </div>
+    </section>
+    <div class="container article-wrap">
+      <article class="prose">
+
+<p>AI가 차트를 ‘읽는다’고 하면 미래 가격을 예측한다고 오해하기 쉽습니다. Chart Strategy Agent의 모델이 실제로 하는 일과 하지 않는 일을 정확히 알면, 결과를 훨씬 현명하게 활용할 수 있습니다.</p>
+
+<h2 id="s1">모델은 무엇을 학습했나</h2>
+<p>이 서비스의 모델은 Google Teachable Machine으로 만든 <strong>이미지 분류 모델</strong>입니다. 대규모 이미지로 미리 학습된 MobileNet 신경망 위에, 추세선 형태의 차트와 삼각수렴 형태의 차트 이미지를 추가 학습(전이 학습)시켰습니다. 그 결과 모델은 새 차트 이미지가 두 형태 중 어디에 더 가까운지를 확률로 출력합니다.</p>
+<figure class="fig">
+  <svg viewBox="0 0 600 120" role="img" aria-label="분석 과정: 이미지 입력, 224x224 전처리, 신경망 추론, 클래스별 확률, 전략 규칙">
+    <g font-size="13">
+      <rect x="5" y="35" width="100" height="50" rx="10" fill="none" stroke="#3b82f6" /><text x="25" y="65">차트 이미지</text>
+      <rect x="125" y="35" width="100" height="50" rx="10" fill="none" stroke="#3b82f6" /><text x="138" y="65">224×224 변환</text>
+      <rect x="245" y="35" width="100" height="50" rx="10" fill="none" stroke="#3b82f6" /><text x="262" y="65">신경망 추론</text>
+      <rect x="365" y="35" width="100" height="50" rx="10" fill="none" stroke="#10b981" /><text x="380" y="65">클래스 확률</text>
+      <rect x="485" y="35" width="110" height="50" rx="10" fill="none" stroke="#f59e0b" /><text x="502" y="65">전략 규칙 적용</text>
+      <path d="M105 60h20M225 60h20M345 60h20M465 60h20" stroke="#64748b" />
+    </g>
+  </svg>
+  <figcaption>그림 1. Chart Strategy Agent의 분석 흐름 — 모든 단계가 브라우저 안에서 실행됩니다.</figcaption>
+</figure>
+
+<h2 id="s2">신뢰도 숫자의 의미</h2>
+<p>‘Trend Line 86%’는 <strong>“이 이미지는 학습한 두 형태 중 추세선 쪽에 86% 더 가깝다”</strong>는 뜻입니다. “가격이 86% 확률로 오른다”는 뜻이 아닙니다. 두 클래스의 확률을 더하면 항상 100%가 되므로, 어느 쪽에도 해당하지 않는 차트를 넣어도 둘 중 하나로 분류됩니다.</p>
+<div class="callout warn"><b>꼭 기억하세요</b>모델의 신뢰도는 ‘형태 유사도’입니다. 미래 수익률, 상승 확률, 매매 성공률을 의미하지 않습니다.</div>
+
+<h2 id="s3">모델이 알 수 없는 것</h2>
+<ul>
+  <li><strong>종목과 시장 정보:</strong> 이미지에 무슨 종목인지, 어느 시장인지 모델은 알지 못합니다.</li>
+  <li><strong>가격 방향:</strong> 이미지 형태만 보므로 상승 추세와 하락 추세를 구분하지 않습니다. 그래서 방향을 직접 입력하는 옵션이 있습니다.</li>
+  <li><strong>펀더멘털과 뉴스:</strong> 실적, 금리, 공시 같은 정보는 반영되지 않습니다.</li>
+  <li><strong>학습하지 않은 패턴:</strong> 헤드앤숄더, 이중 바닥 등은 두 클래스 중 하나로 억지로 분류될 수 있습니다.</li>
+</ul>
+
+<h2 id="s4">신뢰도 기준 활용법</h2>
+<p>분석 화면의 <strong>신뢰도 기준</strong> 슬라이더(기본 70%)는 이런 한계를 보완합니다. 최고 확률이 기준보다 낮으면 에이전트는 억지로 결론을 내리지 않고 ‘관망’을 제시합니다. 확실한 신호만 원한다면 기준을 80~90%로 올리고, 다양한 후보를 살펴보고 싶다면 낮추면 됩니다.</p>
+
+<h2 id="s5">전략 규칙은 어떻게 정해지나</h2>
+<p>모델이 출력한 확률은 투명한 규칙 엔진에 들어갑니다. 규칙은 <a href="index.html#strategy">전략 가이드</a>에 모두 공개되어 있으며, 추세 방향과 투자 성향에 따라 진입·손절·목표 문구와 리스크 등급이 정해집니다. 블랙박스가 아니라 누구나 결과가 나온 이유를 추적할 수 있도록 설계했습니다.</p>
+
+<h2 id="s6">올바른 활용 방법</h2>
+<ol>
+  <li><strong>두 번째 의견으로 사용하세요.</strong> 먼저 스스로 차트를 판단한 뒤, AI 결과와 비교해 놓친 부분이 없는지 점검합니다.</li>
+  <li><strong>여러 시간 프레임으로 교차 확인하세요.</strong> 일봉과 주봉에서 같은 결과가 나오면 신뢰도가 높아집니다.</li>
+  <li><strong>리스크 관리 규칙은 항상 적용하세요.</strong> AI 결과와 무관하게 손절과 포지션 크기 원칙을 지킵니다. 자세한 방법은 <a href="learn-risk.html">리스크 관리 가이드</a>를 참고하세요.</li>
+</ol>
+<div class="callout key"><b>핵심 요약</b><ul><li>모델은 차트의 ‘형태’를 두 가지 중 하나로 분류합니다.</li><li>신뢰도는 형태 유사도이지 수익 확률이 아닙니다.</li><li>AI 결과는 보조 의견으로, 최종 판단과 리스크 관리는 사용자의 몫입니다.</li></ul></div>
+
+        <div class="cta-box">
+          <p>직접 차트를 올려 AI 분석을 받아 보세요.</p>
+          <a href="index.html#analyze" class="btn btn-primary">차트 분석하기 →</a>
+        </div>
+        <p class="disclaimer">※ 이 글은 일반적인 기술적 분석 개념을 설명하는 교육 자료이며, 특정 종목의 매수·매도를 권유하지 않습니다.</p>
+        <section class="related">
+          <h2>함께 읽으면 좋은 글</h2>
+          <div class="learn-grid">
+        <a class="learn-card" href="learn-capture.html">
+          <span class="pill violet">사용 가이드</span>
+          <h3>AI 분석 정확도를 높이는 차트 캡처 방법 7가지</h3>
+          <p>같은 종목도 어떻게 캡처하느냐에 따라 AI 판별 결과가 달라집니다. 이미지 분류 모델이 패턴을 잘 인식하도록 차트를 준비하는 실전 팁을 정리했습니다.</p>
+          <small>읽는 시간 약 6분</small>
+        </a>
+        <a class="learn-card" href="learn-risk.html">
+          <span class="pill amber">리스크 관리</span>
+          <h3>차트 매매를 위한 리스크 관리: 손절, 손익비, 포지션 크기</h3>
+          <p>아무리 좋은 패턴도 리스크 관리 없이는 의미가 없습니다. 손절 위치 정하는 법, 손익비 계산, 계좌 대비 1~2% 규칙으로 포지션 크기를 정하는 방법을 설명합니다.</p>
+          <small>읽는 시간 약 8분</small>
+        </a>
+          </div>
+        </section>
+      </article>
+      <aside class="toc" aria-label="목차">
+        <b>목차</b>
+        <ol>
+          <li><a href="#s1">모델은 무엇을 학습했나</a></li>
+          <li><a href="#s2">신뢰도 숫자의 의미</a></li>
+          <li><a href="#s3">모델이 알 수 없는 것</a></li>
+          <li><a href="#s4">신뢰도 기준 활용법</a></li>
+          <li><a href="#s5">전략 규칙은 어떻게 정해지나</a></li>
+          <li><a href="#s6">올바른 활용 방법</a></li>
+        </ol>
+      </aside>
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>
+        <a href="index.html" class="brand"><span>Chart Strategy <b>Agent</b></span></a>
+        <p>AI 기반 투자 분석을 위한 차트 이미지 자동 분석 사이트</p>
+        <nav class="footer-links" aria-label="사이트 정보">
+          <a href="about.html">서비스 소개</a>
+          <a href="learn.html">학습 센터</a>
+          <a href="privacy.html">개인정보처리방침</a>
+          <a href="terms.html">이용약관</a>
+          <a href="contact.html">문의하기</a>
+        </nav>
+      </div>
+      <p class="fine">본 서비스는 교육·연구 목적의 보조 도구이며, 제공되는 정보는 투자 자문이 아닙니다.<br />문의: leapforfly@gmail.com<br />© 2026 Chart Strategy Agent</p>
+    </div>
+  </footer>
+  <script>
+    document.getElementById("menuToggle").addEventListener("click", function () {
+      document.getElementById("menu").classList.toggle("open");
+    });
+  </script>
+</body>
+</html>

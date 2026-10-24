@@ -57,10 +57,19 @@ python3 -m http.server 8000
 ## 파일 구성
 
 ```
-├── index.html   # 페이지 구조와 메뉴
-├── style.css    # 디자인, 반응형 레이아웃
-├── app.js       # 모델 로드, 예측, 전략 결정 규칙, 분석 기록
-└── ads.txt      # Google AdSense 판매자 인증
+├── index.html              # 메인: 소개, 차트 분석, 전략 가이드, 학습 센터 미리보기, FAQ
+├── learn.html              # 학습 센터 목록
+├── learn-*.html            # 학습 글 5편 (추세선, 삼각수렴, 리스크 관리, 캡처 가이드, AI 원리와 한계)
+├── about.html              # 서비스 소개 · 운영자 정보
+├── privacy.html            # 개인정보처리방침 (AdSense 쿠키 고지 포함)
+├── terms.html              # 이용약관 · 투자 면책
+├── contact.html            # 문의하기
+├── 404.html                # 오류 페이지 (광고 미게재)
+├── style.css               # 디자인, 반응형 레이아웃
+├── app.js                  # 모델 로드, 예측, 전략 결정 규칙, 분석 기록
+├── sitemap.xml             # 검색엔진용 사이트맵
+├── favicon.svg             # 사이트 아이콘
+└── ads.txt                 # Google AdSense 판매자 인증
 ```
 
 ## 모델
