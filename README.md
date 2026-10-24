@@ -59,7 +59,8 @@ python3 -m http.server 8000
 ```
 ├── index.html   # 페이지 구조와 메뉴
 ├── style.css    # 디자인, 반응형 레이아웃
-└── app.js       # 모델 로드, 예측, 전략 결정 규칙, 분석 기록
+├── app.js       # 모델 로드, 예측, 전략 결정 규칙, 분석 기록
+└── ads.txt      # Google AdSense 판매자 인증
 ```
 
 ## 모델
