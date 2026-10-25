@@ -422,23 +422,40 @@ $$("main section[id]").forEach((s) => io.observe(s));
 // 히어로 데모 캔들 (삼각수렴 형태)
 (function drawHeroCandles() {
   const g = $("#heroCandles");
-  const n = 22;
+  // 고정 시드 난수로 매번 같은 모양을 그림
+  let seed = 7;
+  const rand = () => ((seed = (seed * 16807) % 2147483647) / 2147483647);
+  const upper = (x) => 40 + 64 * (x - 20) / 320;
+  const lower = (x) => 190 - 68 * (x - 20) / 320;
+  const n = 40, step = 7.9, w = 5;
   let html = "";
+  let open = upper(24) + 10;
+  const candle = (x, o, c, hi, lo) => {
+    const color = c <= o ? "#10b981" : "#ef4444";
+    const top = Math.min(o, c), h = Math.max(1.2, Math.abs(c - o));
+    html += `<line x1="${x}" x2="${x}" y1="${hi.toFixed(1)}" y2="${lo.toFixed(1)}" stroke="${color}" stroke-width="1"/>`;
+    html += `<rect x="${(x - w / 2).toFixed(1)}" y="${top.toFixed(1)}" width="${w}" height="${h.toFixed(1)}" fill="${color}"/>`;
+  };
   for (let i = 0; i < n; i++) {
-    const x = 24 + i * 14.5;
+    const x = 24 + i * step;
     const t = i / (n - 1);
-    const hi = 40 + 64 * t;
-    const lo = 190 - 68 * t;
-    const up = i % 2 === 0;
-    const amp = (lo - hi) * (0.55 + 0.35 * Math.sin(i * 1.7));
-    const mid = (hi + lo) / 2;
-    const y1 = up ? lo - 4 : hi + 4;
-    const y2 = up ? lo - amp : hi + amp;
-    const top = Math.min(y1, y2), h = Math.abs(y2 - y1);
-    const color = up ? "#10b981" : "#ef4444";
-    html += `<line x1="${x}" x2="${x}" y1="${up ? hi + 6 : hi}" y2="${up ? lo : lo - 6}" stroke="${color}" stroke-width="1.2" opacity=".6"/>`;
-    html += `<rect x="${x - 4}" y="${Math.max(top, hi) || mid}" width="8" height="${Math.max(4, Math.min(h, lo - hi))}" fill="${color}" rx="1"/>`;
+    const mid = (upper(x) + lower(x)) / 2, half = (lower(x) - upper(x)) / 2;
+    // 수렴할수록 주기가 짧아지는 파동 (상단·하단 추세선을 번갈아 터치)
+    const phase = Math.PI * (0.9 + 5.2 * t + 2.2 * t * t);
+    const target = mid + half * 0.92 * Math.cos(phase) + (rand() - 0.5) * half * 0.35;
+    const close = Math.min(lower(x) - 1, Math.max(upper(x) + 1, target));
+    const body = Math.abs(close - open);
+    const hi = Math.max(upper(x) - 2, Math.min(open, close) - rand() * (3 + body * 0.6));
+    const lo = Math.min(lower(x) + 2, Math.max(open, close) + rand() * (3 + body * 0.6));
+    candle(x, open, close, hi, lo);
+    open = close + (rand() - 0.5) * 2.5;
   }
+  // 상단 돌파 캔들
+  [104, 92, 80, 71].forEach((c, k) => {
+    const x = 24 + (n + k) * step;
+    const o = k === 0 ? open : c + 9 + rand() * 3;
+    candle(x, o, c, c - 2 - rand() * 5, o + 2 + rand() * 4);
+  });
   g.innerHTML = html;
 })();
 
