@@ -444,3 +444,26 @@ $$("main section[id]").forEach((s) => io.observe(s));
 
 renderHistory();
 loadModel();
+
+// 제휴 문의 폼 (Formspree)
+$("#partnerForm").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const form = e.currentTarget;
+  const status = $("#partnerStatus");
+  const btn = form.querySelector("button[type=submit]");
+  btn.disabled = true;
+  status.className = "pf-status";
+  status.textContent = "전송 중입니다…";
+  try {
+    const res = await fetch(form.action, { method: "POST", body: new FormData(form), headers: { Accept: "application/json" } });
+    if (!res.ok) throw new Error(res.status);
+    form.reset();
+    status.className = "pf-status ok";
+    status.textContent = "문의가 접수되었습니다. 검토 후 이메일로 회신드리겠습니다.";
+  } catch {
+    status.className = "pf-status err";
+    status.textContent = "전송에 실패했습니다. 잠시 후 다시 시도하거나 leapforfly@gmail.com으로 보내주세요.";
+  } finally {
+    btn.disabled = false;
+  }
+});

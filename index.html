@@ -40,6 +40,7 @@
         <a href="learn.html">학습 센터</a>
         <a href="#faq">FAQ</a>
         <a href="about.html">서비스 소개</a>
+        <a href="#partnership">제휴 문의</a>
       </nav>
       <div class="nav-right">
         <span class="model-status" id="modelStatus"><i></i><em>모델 대기</em></span>
@@ -421,6 +422,39 @@
         </div>
         <div class="history-grid" id="historyGrid"></div>
         <p class="history-empty" id="historyEmpty">아직 분석 기록이 없습니다.</p>
+      </div>
+    </section>
+
+    <!-- ============ PARTNERSHIP ============ -->
+    <section class="section section-alt" id="partnership">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Partnership</span>
+          <h2>제휴 문의</h2>
+          <p>광고·콘텐츠 협업, 데이터·기술 제휴 등 제안을 남겨주시면 검토 후 이메일로 회신드립니다.</p>
+        </div>
+        <form class="partner-form" id="partnerForm" action="https://formspree.io/f/xnppnneq" method="POST">
+          <div class="pf-row">
+            <label>이름 / 담당자 *<input type="text" name="name" required maxlength="60" autocomplete="name" /></label>
+            <label>회사 / 단체명<input type="text" name="company" maxlength="80" autocomplete="organization" /></label>
+          </div>
+          <div class="pf-row">
+            <label>이메일 *<input type="email" name="email" required autocomplete="email" /></label>
+            <label>제휴 유형
+              <select name="type">
+                <option>광고 제휴</option>
+                <option>콘텐츠 협업</option>
+                <option>기술·데이터 제휴</option>
+                <option>기타</option>
+              </select>
+            </label>
+          </div>
+          <label>문의 내용 *<textarea name="message" rows="6" required maxlength="3000"></textarea></label>
+          <input type="hidden" name="_subject" value="[Chart Strategy Agent] 제휴 문의" />
+          <input type="text" name="_gotcha" class="pf-hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
+          <button type="submit" class="btn btn-primary btn-block">문의 보내기</button>
+          <p class="pf-status" id="partnerStatus" role="status"></p>
+        </form>
       </div>
     </section>
   </main>

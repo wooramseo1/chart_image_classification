@@ -360,3 +360,20 @@ input[type=range] { width: 100%; accent-color: var(--blue); }
   .toc { position: static; order: -1; }
 }
 .faq details p a { color: #60a5fa; text-decoration: underline; text-underline-offset: 3px; }
+
+/* ---------- partnership form ---------- */
+.partner-form { max-width: 720px; margin: 0 auto; display: grid; gap: 16px; background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); padding: 28px; }
+.pf-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.partner-form label { display: grid; gap: 8px; font-size: 13px; font-weight: 600; color: var(--muted); }
+.partner-form input, .partner-form select, .partner-form textarea { width: 100%; background: var(--bg-2); border: 1px solid var(--line-2); border-radius: 10px; padding: 12px 14px; color: var(--text); font: 400 14px inherit; font-family: inherit; transition: border-color .15s; }
+.partner-form textarea { resize: vertical; min-height: 140px; }
+.partner-form input:focus, .partner-form select:focus, .partner-form textarea:focus { outline: none; border-color: var(--blue); }
+.partner-form .btn-block { margin-top: 4px; }
+.pf-hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+.pf-status { margin: 0; min-height: 1.4em; text-align: center; font-size: 14px; color: var(--muted); }
+.pf-status.ok { color: var(--green); }
+.pf-status.err { color: var(--red); }
+@media (max-width: 640px) {
+  .pf-row { grid-template-columns: 1fr; }
+  .partner-form { padding: 20px; }
+}
