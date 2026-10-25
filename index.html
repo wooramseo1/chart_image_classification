@@ -4,16 +4,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Chart Strategy Agent — AI 차트 이미지 자동 분석</title>
-  <meta name="description" content="차트 이미지를 업로드하면 AI 모델이 Trend Line / Triangle Pattern을 판별하고 대응 전략을 제시합니다." />
+  <meta name="description" content="차트 이미지를 업로드하면 AI 모델이 Trend Line / Pattern을 판별하고 대응 전략을 제시합니다." />
   <link rel="canonical" href="https://wooramseo1.github.io/chart_image_classification/" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Chart Strategy Agent" />
   <meta property="og:title" content="Chart Strategy Agent — AI 차트 이미지 자동 분석" />
-  <meta property="og:description" content="차트 이미지를 업로드하면 AI 모델이 Trend Line / Triangle Pattern을 판별하고 대응 전략을 제시합니다." />
+  <meta property="og:description" content="차트 이미지를 업로드하면 AI 모델이 Trend Line / Pattern을 판별하고 대응 전략을 제시합니다." />
   <meta property="og:url" content="https://wooramseo1.github.io/chart_image_classification/" />
   <meta property="og:locale" content="ko_KR" />
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Chart Strategy Agent","url":"https://wooramseo1.github.io/chart_image_classification/","applicationCategory":"FinanceApplication","operatingSystem":"Web","inLanguage":"ko","description":"차트 이미지를 AI로 분석해 Trend Line과 Triangle Pattern을 판별하고 대응 전략을 제시하는 웹 서비스","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Chart Strategy Agent","url":"https://wooramseo1.github.io/chart_image_classification/","applicationCategory":"FinanceApplication","operatingSystem":"Web","inLanguage":"ko","description":"차트 이미지를 AI로 분석해 Trend Line과 Pattern을 판별하고 대응 전략을 제시하는 웹 서비스","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"}}</script>
   <meta name="google-adsense-account" content="ca-pub-8016145801255618" />
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8016145801255618" crossorigin="anonymous"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -58,7 +58,7 @@
           <span class="eyebrow">AI-Powered Chart Intelligence</span>
           <h1>차트 이미지 한 장으로<br /><span class="grad">투자 전략</span>을 결정하세요</h1>
           <p class="lead">Chart Strategy Agent는 사전 학습된 딥러닝 이미지 모델로 차트의 형태를
-            <b>Trend Line(추세선)</b>과 <b>Triangle Pattern(삼각수렴)</b>으로 판별하고,
+            <b>Trend Line(추세선)</b>과 <b>Pattern(패턴)</b>으로 판별하고,
             패턴별 진입·손절·목표가 설정 전략을 즉시 제시합니다.</p>
           <div class="hero-cta">
             <a href="#analyze" class="btn btn-primary">차트 업로드하기 →</a>
@@ -88,7 +88,7 @@
             <div class="mock-result">
               <div>
                 <small>Detected Pattern</small>
-                <b>Triangle Pattern</b>
+                <b>Pattern</b>
               </div>
               <div class="mock-conf">
                 <small>Confidence</small>
@@ -118,7 +118,7 @@
           <article class="feature">
             <div class="f-icon">🧠</div>
             <h3>AI 패턴 분류</h3>
-            <p>Teachable Machine 기반 CNN 모델이 Trend Line과 Triangle Pattern을 확률로 판별합니다.</p>
+            <p>Teachable Machine 기반 CNN 모델이 Trend Line과 Pattern을 확률로 판별합니다.</p>
           </article>
           <article class="feature">
             <div class="f-icon">🎯</div>
@@ -294,12 +294,12 @@
             </svg>
             <div class="guide-body">
               <span class="pill green">Class 02</span>
-              <h3>Triangle Pattern · 삼각수렴</h3>
+              <h3>Pattern · 패턴</h3>
               <p>고점은 낮아지고 저점은 높아지며 변동폭이 수렴하는 구간으로, 큰 방향성 이탈을 앞둔 경우가 많습니다.</p>
               <ul>
                 <li><b>대기</b> — 수렴 구간 내부에서는 신규 진입 자제</li>
                 <li><b>진입</b> — 거래량 동반 상단/하단 돌파 방향으로</li>
-                <li><b>목표</b> — 삼각형 최대 폭만큼 돌파 지점에서 투영</li>
+                <li><b>목표</b> — 패턴 최대 폭만큼 돌파 지점에서 투영</li>
                 <li><b>핵심</b> — 돌파 매매(Breakout)</li>
               </ul>
             </div>
@@ -314,7 +314,7 @@
             <tbody>
               <tr><td>Trend Line ≥ 기준 · 상승</td><td>추세 지속 가능성 높음</td><td><span class="act buy">추세 추종 매수</span></td></tr>
               <tr><td>Trend Line ≥ 기준 · 하락</td><td>하락 추세 지속</td><td><span class="act sell">비중 축소</span></td></tr>
-              <tr><td>Triangle ≥ 기준</td><td>변동성 수렴 → 돌파 임박</td><td><span class="act wait">돌파 대기</span></td></tr>
+              <tr><td>Pattern ≥ 기준</td><td>변동성 수렴 → 돌파 임박</td><td><span class="act wait">돌파 대기</span></td></tr>
               <tr><td>최고 확률 &lt; 기준</td><td>패턴 신호 불명확</td><td><span class="act hold">관망</span></td></tr>
             </tbody>
           </table>
@@ -388,7 +388,7 @@
           </details>
           <details>
             <summary>신뢰도 86%는 가격이 오를 확률인가요?</summary>
-            <p>아닙니다. 신뢰도는 업로드한 차트가 학습한 두 형태(추세선, 삼각수렴) 중 어느 쪽에 더 가까운지를 나타내는 형태 유사도입니다. 자세한 내용은 <a href="learn-ai-limits.html">AI 차트 분석의 원리와 한계</a>를 참고하세요.</p>
+            <p>아닙니다. 신뢰도는 업로드한 차트가 학습한 두 형태(추세선, 패턴) 중 어느 쪽에 더 가까운지를 나타내는 형태 유사도입니다. 자세한 내용은 <a href="learn-ai-limits.html">AI 차트 분석의 원리와 한계</a>를 참고하세요.</p>
           </details>
           <details>
             <summary>상승 추세와 하락 추세는 어떻게 구분하나요?</summary>

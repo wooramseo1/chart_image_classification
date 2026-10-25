@@ -147,7 +147,7 @@ function classKey(name) {
 
 const CLASS_INFO = {
   trend: { name: "Trend Line", ko: "추세선", color: "var(--blue)" },
-  triangle: { name: "Triangle Pattern", ko: "삼각수렴", color: "var(--green)" },
+  triangle: { name: "Pattern", ko: "패턴", color: "var(--green)" },
 };
 const info = (k) => CLASS_INFO[k] || { name: k, ko: k, color: "var(--violet)" };
 
@@ -214,15 +214,15 @@ function decideStrategy(probs, opts, threshold) {
   } else if (top.key === "triangle") {
     const bias = dir === "up" ? "상단(상승) 돌파 우세" : dir === "down" ? "하단(하락) 이탈 우세" : "양방향 돌파 가능";
     s = {
-      action: "WAIT", cls: "wait", title: `삼각수렴 — 돌파 대기 (${bias})`,
-      summary: "변동성이 수렴하는 삼각형 패턴으로 판단됩니다. 수렴 내부에서는 방향성이 불확실하므로, 추세선 돌파가 확인될 때 해당 방향으로 진입합니다.",
+      action: "WAIT", cls: "wait", title: `패턴 — 돌파 대기 (${bias})`,
+      summary: "변동성이 수렴하는 패턴으로 판단됩니다. 수렴 내부에서는 방향성이 불확실하므로, 추세선 돌파가 확인될 때 해당 방향으로 진입합니다.",
       entry: dir === "down"
         ? "하단 추세선 이탈 종가 확인 시 매도 / 보유분 정리"
         : `상단 추세선 돌파 + 거래량 증가 시 매수 (${rp.size})`,
       stop: dir === "down"
-        ? "삼각형 내부 재진입 시 손절"
-        : `돌파 실패로 삼각형 내부 복귀 시 · ${rp.stopPad}`,
-      target: `삼각형 최대 폭만큼 돌파 지점에서 투영 (손익비 ${rp.rr})`,
+        ? "패턴 내부 재진입 시 손절"
+        : `돌파 실패로 패턴 내부 복귀 시 · ${rp.stopPad}`,
+      target: `패턴 최대 폭만큼 돌파 지점에서 투영 (손익비 ${rp.rr})`,
       checklist: [
         "수렴 꼭짓점의 2/3~3/4 지점 이전 돌파가 신뢰도가 높음",
         "돌파 캔들의 거래량이 평균 대비 1.5배 이상인지 확인",
@@ -419,7 +419,7 @@ const io = new IntersectionObserver((entries) => {
 }, { rootMargin: "-45% 0px -50% 0px" });
 $$("main section[id]").forEach((s) => io.observe(s));
 
-// 히어로 데모 캔들 (삼각수렴 형태)
+// 히어로 데모 캔들 (패턴 형태)
 (function drawHeroCandles() {
   const g = $("#heroCandles");
   // 고정 시드 난수로 매번 같은 모양을 그림
