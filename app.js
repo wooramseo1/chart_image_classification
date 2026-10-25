@@ -479,7 +479,7 @@ $("#partnerForm").addEventListener("submit", async (e) => {
     status.textContent = "문의가 접수되었습니다. 검토 후 이메일로 회신드리겠습니다.";
   } catch {
     status.className = "pf-status err";
-    status.textContent = "전송에 실패했습니다. 잠시 후 다시 시도하거나 leapforfly@gmail.com으로 보내주세요.";
+    status.textContent = "전송에 실패했습니다. 잠시 후 다시 시도하거나 inbroad.global@gmail.com으로 보내주세요.";
   } finally {
     btn.disabled = false;
   }
